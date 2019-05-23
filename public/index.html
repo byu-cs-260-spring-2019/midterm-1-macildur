@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href="cs-260-stuff.firebaseapps.com">
+    <title>BookSearch</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Welcome to BookSearch!</h1>
+    <p>Enter a word, phrase, or book title.</p>
+
+    <div id="app">
+      <form v-on:submit.prevent="search_query()">
+        <input type="text" v-model="query">
+        <button type="submit">Search</button>
+      </form>
+
+      <div v-if="loading">
+        <p>Searching.....</p>
+      </div>
+      <div id="results">
+        <ul>
+          <li v-for="result in results">
+            <div id="one_book">
+              <label>{{result.title}}</label>
+              <label>{{result.author_name}}</label>
+              <label>{{result.publish_date}}</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script text="type/javascript" src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+// cs-260-stuff.firebaseapps.com
 let app = new Vue
 ({
     el: "#app",

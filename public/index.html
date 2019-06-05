@@ -24,9 +24,11 @@
         <ul>
           <li v-for="result in results">
             <div id="one_book">
-              <label>{{result.title}}</label>
-              <label>{{result.author_name}}</label>
-              <label>{{result.publish_date}}</label>
+              <p>{{result.title}}</p>
+              <p>Author: {{result.author_name}}</p>
+              <p>Published: {{result.publish_date}}</p>
+              <!-- <label>{{result.author_name}}</label>
+              <label>{{result.publish_date}}</label> -->
             </div>
           </li>
         </ul>
